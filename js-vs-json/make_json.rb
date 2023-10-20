@@ -13,7 +13,7 @@ def create_hash(n = 50)
   end
 end
 
-json = create_hash(7).to_json
+json = create_hash(9).to_json
 File.write 'js.js', <<-JS
   window.zomg = #{json};
   document.getElementById('result').innerText = performance.now() - started_at;
